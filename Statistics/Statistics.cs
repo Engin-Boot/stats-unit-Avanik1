@@ -10,7 +10,7 @@ namespace Statistics
         public Stats CalculateStatistics(List<float> numbers) {
             Stats obj = new Stats();
 
-            if (numbers.Empty())
+            if (numbers.Count==0)
             {
                 obj.min = Double.NaN;
                 obj.max = Double.NaN;
@@ -19,7 +19,7 @@ namespace Statistics
                 return obj;
             }
 
-            for(int i = 0; i < numbers.Length; i++)
+            for(int i = 0; i < numbers.Count; i++)
             {
                 sum += numbers[i];
                 if (numbers[i] < min)
@@ -32,7 +32,7 @@ namespace Statistics
                 }
             }
 
-            average = sum/numbers.Length;
+            average = sum/numbers.Count;
             obj.min = min;
             obj.max = max;
             obj.average = average;
@@ -43,6 +43,6 @@ namespace Statistics
 
     public class Stats
     {
-        public int min, max, average;
+        public float min, max, average;
     }
 }
