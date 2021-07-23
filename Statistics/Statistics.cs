@@ -5,7 +5,7 @@ namespace Statistics
 {
     public class StatsComputer
     {
-        public float sum = 0, min = Single.MaxValue, max = Single.MinValue, average;
+        public float sum = 0F, min = Single.MaxValue, max = Single.MinValue, average;
     
         public Stats CalculateStatistics(List<float> numbers) {
             Stats obj = new Stats();
