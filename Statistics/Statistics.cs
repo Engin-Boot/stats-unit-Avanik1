@@ -43,6 +43,6 @@ namespace Statistics
 
     public class Stats
     {
-        public min, max, average;
+        public int min, max, average;
     }
 }
